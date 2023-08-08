@@ -1,0 +1,6 @@
+1. Run the pretrain_job.sh script.
+
+2. Run the v2_ft_job.sh
+
+3. Execute the following command:
+python summarize.py
