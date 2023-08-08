@@ -1,0 +1,17 @@
+1. To download the molecular graph dataset, run commands below
+
+wget http://snap.stanford.edu/gnn-pretrain/data/chem_dataset.zip
+unzip chem_dataset.zip -d transferLearning_MoleculeNet_PPI/chem/
+
+2. Clone the repository: https://github.com/DongkiKim95/D-SLA
+This is to train the teacher model.
+
+3. Execute the following command to train the student model:
+"python pretrain_DSLA.py --edit_learn --add_strong_pert --margin_learn --margin 5.0 --lr 0.001"
+
+
+4. Once the above training is complete, run "sh pretrainV2.sh" (for the teacher model)
+
+5. Finetune the model: "sh ft_job.sh"
+
+6. Summarizing the results: "python summarize.py"
